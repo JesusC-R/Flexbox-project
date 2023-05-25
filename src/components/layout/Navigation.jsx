@@ -20,6 +20,9 @@ import Friend2 from "../../assets/img/user-4.jpg";
 import Friend3 from "../../assets/img/user-5.jpg";
 import Friend4 from "../../assets/img/user-6.jpg";
 
+import ReviewImg1 from "../../assets/img/user-1.jpg";
+import ReviewImg2 from "../../assets/img/user-2.jpg";
+
 
 const Navigation = () => {
   return (
@@ -104,16 +107,40 @@ const Navigation = () => {
               architecto voluptate delectus, inventore iure aliquid aliquam.
             </p>
             <ul className="list">
-              <li className="list__item"><Sprite className="list__item__icon"/>Close to the beach</li>
-              <li className="list__item"><Sprite className="list__item__icon"/>Breask fast included</li>
-              <li className="list__item"><Sprite className="list__item__icon"/>Free airport shuttle</li>
-              <li className="list__item"><Sprite className="list__item__icon"/>Free wifi</li>
-              <li className="list__item"><Sprite className="list__item__icon"/>Air conditioning and heating</li>
-              <li className="list__item"><Sprite className="list__item__icon"/>Pets allowed</li>
-              <li className="list__item"><Sprite className="list__item__icon"/>We speak all multiple language</li>
-              <li className="list__item"><Sprite className="list__item__icon"/>Perfect for all families</li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                Close to the beach
+              </li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                Breask fast included
+              </li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                Free airport shuttle
+              </li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                Free wifi
+              </li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                Air conditioning and heating
+              </li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                Pets allowed
+              </li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                We speak all multiple language
+              </li>
+              <li className="list__item">
+                <Sprite className="list__item__icon" />
+                Perfect for all families
+              </li>
             </ul>
-            
+
             <div className="recommend">
               <p className="recommend__cout">
                 Lucy and three other people recommend this hotel
@@ -143,7 +170,50 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="user-reviews">User reviews</div>
+          <figure className="user-reviews">
+            <figure className="review">
+              <blockquote className="review__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                doloremque architecto dicta animi, totam, itaque officia ex.
+              </blockquote>
+              <figcaption className="review__user">
+                <img src={ReviewImg1} alt="img" className="review__photo" />
+                <div className="review__user-box">
+                  <p className="review__user-name">Nick Smith</p>
+                  <p className="review__user-date">Feb 23rd, 2017</p>
+                </div>
+                <div className="review__rating">7.8</div>
+              </figcaption>
+            </figure>
+
+            <figure className="review">
+              <blockquote className="review__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                doloremque architecto dicta animi.
+              </blockquote>
+              <figcaption className="review__user">
+                <img src={ReviewImg2} alt="img" className="review__photo" />
+                <div className="review__user-box">
+                  <p className="review__user-name">Mary Thomas</p>
+                  <p className="review__user-date">Sep 13th, 2017</p>
+                </div>
+                <div className="review__rating">9.3</div>
+              </figcaption>
+            </figure>
+
+            <button className="btn-inline">
+              Show all <span>&rarr;</span>
+            </button>
+          </figure>
+        </div>
+        <div className="cta">
+          <h2 className="cta__book-now">
+            Good news! We have 4 free rooms for your selected dates
+          </h2>
+          <button className="btn">
+            <span className="btn__visible">Book now</span>
+            <span className="btn__invisible">Only 4 rooms left</span>
+          </button>
         </div>
       </main>
     </div>
