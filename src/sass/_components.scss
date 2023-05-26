@@ -113,11 +113,26 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        flex: 1;
+      }
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding-bottom: 1rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 100%;
     }
   }
 
@@ -155,6 +170,11 @@
 
     display: flex;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
   &__icon {
     width: 1.75rem;
@@ -170,6 +190,10 @@
   color: currentColor; // Uses the same color as the parent element
   text-align: center;
   padding: 2.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
 }
 
 ////////////////////////////////////////////////////
@@ -189,8 +213,11 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--color-grey-light-2);
-
-  &__heading {
+  @media only screen and (max-width: $bp-smallest) {
+    max-width: 100%;
+    width: 100%;
+  }
+  F &__heading {
     font-size: 2.25rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -329,6 +356,7 @@
 
   &__friends {
     padding-left: 2rem;
+    display: flex;
   }
 
   &__photo {
@@ -351,6 +379,15 @@
   position: relative;
   // align-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  @media only screen and (max-width: $bp-small) {
+    max-width: 100%;
+    width: 100%;
+  }
+
   &__text {
     position: relative;
     z-index: 2;
@@ -360,6 +397,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   &__photo {
     height: 4.5rem;
     width: 4.5rem;
@@ -369,6 +407,14 @@
   }
   &__user-box {
     margin-right: 7rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-right: auto;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: auto;
+    }
   }
   &__user-name {
     // font-size: 1.2rem;
@@ -403,6 +449,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
   &__book-now {
     font-size: 2rem;
